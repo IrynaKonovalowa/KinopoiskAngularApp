@@ -1,0 +1,28 @@
+<div [ngClass] = "{divWrapper:true}">
+  <div [ngClass] = "{divEnterTitle:true}">
+  <div *ngIf ="doneInfo" [ngClass] = "{divEnter:true}" >Ehter the title of the movie:</div>
+  <div *ngIf ="doneBack" [ngClass] = "{divTitle:true}">{{title}}</div>
+  <div *ngIf ="doneBack" [ngClass] = "{divRating:true}">{{rating}}</div>      
+  </div>
+  <div *ngIf ="doneBack" [ngClass] = "{divForFilm:true}">
+<img src="{{poster}}" alt="Film">
+<div>
+<p><strong>Year:</strong> {{year}}</p>
+<p><strong>Released:</strong> {{released}}</p>
+<p><strong>Runtime:</strong> {{runtime}}</p>
+<p><strong>Genre:</strong> {{genre}}</p>
+<p><strong>Director:</strong> {{director}}</p>
+<p><strong>Writer:</strong> {{writer}}</p>
+<p><strong>Actors:</strong> {{actors}}</p>
+<p><strong>Plot:</strong>{{plot}}</p>
+<p><strong>Language:</strong> {{language}}</p>
+<p><strong>Country: </strong>{{country}}</p>
+<p><strong>Awards:</strong> {{awards}}</p>
+</div>
+</div> 
+<div [ngClass] = "{divForPoisk:true}">
+      <input *ngIf ="doneInfo" type="text"  [(ngModel)]="inputTitle" placeholder="Enter film">
+      <button *ngIf ="doneInfo" (click)="Info()">Search</button>
+      <button *ngIf ="doneBack" (click)="Back()">Back</button>
+</div>
+</div>
